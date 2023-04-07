@@ -87,8 +87,8 @@ submit_button.addEventListener('click', () => {
     })
     .then(res=>res.json())
     .then( res => {
-        const text = (res.digit!==undefined && res.result!==undefined)?
-            'Digit: '+res.digit+'<br/>Confidence: '+(res.result[res.digit]*100.).toFixed(2)+'%':
+        const text = (res.digit!==undefined && res.result!==undefined && res.ip!==undefined)?
+            'Digit: '+res.digit+'<br/>Confidence: '+(res.result[res.digit]*100.).toFixed(2)+'%'+'<br/>IP: '+res.ip:
              '<span style="color:red">Error</span><br/>Unexpected response';
         message.innerHTML = text;
     }).catch(err => {
