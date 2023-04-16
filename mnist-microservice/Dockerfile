@@ -12,7 +12,7 @@ WORKDIR /app
 
 ADD image.py image.py
 ADD mnist_recognizer.py mnist_recognizer.py
-ADD model-cpu-fix.h5 model.h5
+ADD model-cpu-fix-2nd.h5 model.h5
 
 EXPOSE 5000
 
