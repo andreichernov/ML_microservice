@@ -1,6 +1,11 @@
 FROM python:3.8
 
-RUN python -m pip install flask flask-cors gunicorn numpy tensorflow pillow
+RUN python -m pip install protobuf==3.20.0
+COPY tensorflow-2.12.0-cp38-cp38-linux_x86_64.whl /tensorflow-2.12.0-cp38-cp38-linux_x86_64.whl
+RUN python -m pip install /tensorflow-2.12.0-cp38-cp38-linux_x86_64.whl && rm -rf /tensorflow-2.12.0-cp38-cp38-linux_x86_64.whl
+RUN python -m pip install flask flask-cors gunicorn pillow keras==2.11
+RUN python -m pip install numpy==1.22
+
 
 WORKDIR /app
 
