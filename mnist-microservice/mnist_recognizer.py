@@ -14,7 +14,7 @@ model = keras.models.load_model('model.h5')
 # Cross Origin Resource Sharing (CORS) handling. CORS - механизм, который позволяет веб-страницам получать доступ к
 # ресурсам (например, изображениям, скриптам) на других доменах. Это важно, когда веб-страница загружается
 # с одного домена, а ресурсы, необходимые для ее отображения, находятся на другом домене.
-CORS(app, resources={'/image': {"origins": "http://localhost:8080"}})
+CORS(app)
 
 
 @app.route('/image', methods=['POST'])
