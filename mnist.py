@@ -1,7 +1,7 @@
-from keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout
-from keras.models import Sequential
-from tensorflow import keras
-from keras.datasets import mnist
+from tensorflow.keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout
+from tensorflow.keras.models import Sequential
+from tensorflow.tensorflow import keras
+from tensorflow.keras.datasets import mnist
 
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
