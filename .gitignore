@@ -1,2 +1,3 @@
 .idea
 mnist-microservice/tensorflow-2.12.0-cp38-cp38-linux_x86_64.whl
+**/.venv
