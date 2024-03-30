@@ -1,6 +1,6 @@
 FROM python:3.8
 
-RUN python -m pip install flask flask-cors gunicorn numpy tensorflow pillow
+RUN python -m pip install flask flask-cors gunicorn numpy tensorflow pillow==9.5.0
 
 WORKDIR /app
 
